@@ -1,0 +1,9 @@
+
+
+create table useri(id INTEGER constraint useri primary key, username varchar, online boolean, modificat boolean,mesaj varchar,tdlcl integer);
+
+create table mesaje(id INTEGER constraint mesaje primary key, userid1 integer, userid2 integer, message varchar, constraint mesaje_useri_null_null_fk foreign key (userid1,userid2) references useri (id,id));
+
+create table verificare(id INTEGER constraint verificare primary key, client varchar, comanda varchar);
+
+insert into verificare values(1,'User existent,v-ati autentificat deja. Va logati?','autentificare claudia');
